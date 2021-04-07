@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Intexium.Models
 {
+    // test class to make sure database works
     public class Book
     {
         [Key]
