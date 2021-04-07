@@ -1,4 +1,5 @@
 ﻿using Intexium.Models;
+using Intexium.Models.ProjectListViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,15 +13,20 @@ namespace Intexium.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        public ApplicationDbContext context { get; set; }
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext ctx )
         {
             _logger = logger;
+            context = ctx;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int pageNum)
         {
-            return View();
+            return View(new ProjectListViewModel
+            {
+                Books = context.Books
+            });
         }
 
         public IActionResult Privacy()
