@@ -1,5 +1,4 @@
 ﻿using Intexium.Models;
-using Intexium.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,20 +12,15 @@ namespace Intexium.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        public ApplicationDbContext context { get; set; }
 
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext ctx)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            context = ctx;
         }
 
         public IActionResult Index()
         {
-            return View(new IndexViewModel
-            {
-                Books = context.Books
-            });
+            return View();
         }
 
         public IActionResult Privacy()
