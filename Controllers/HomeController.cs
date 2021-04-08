@@ -12,10 +12,12 @@ namespace Intexium.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private ApplicationDbContext context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext ctx)
         {
             _logger = logger;
+            context = ctx;
         }
 
         public IActionResult Index()
