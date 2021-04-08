@@ -10,4 +10,7 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-@ViewBag.String
+@for (var i = 0; i < ViewBag.Bookies.Count; i++)
+{
+    <p>@ViewBag.Bookies[i].Title</p>
+}
