@@ -25,18 +25,11 @@ namespace Intexium.Controllers
         public IActionResult Index()
         {
 
-            List<Book> Bookies = new List<Book>();
 
-            foreach(var x in context.Books)
+            return View(new IndexViewModel
             {
-                Bookies.Add(x);
-            }
-
-            ViewBag.Bookies = Bookies;
-
-            ViewBag.String = "Hello!";
-
-            return View();
+                Books = context.Books
+            });
 
         }
 

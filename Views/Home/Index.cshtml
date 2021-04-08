@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@model IndexViewModel
 <!--Section 2 Group 1 -->
 <!--Tyler Bartholemew, Tingyu Huang, Chen-Han Yang, Aubrey -->
 
@@ -10,7 +10,7 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-@for (var i = 0; i < ViewBag.Bookies.Count; i++)
+@foreach (var x in Model.Books)
 {
-    <p>@ViewBag.Bookies[i].Title</p>
+    <p>@x.Title</p>
 }

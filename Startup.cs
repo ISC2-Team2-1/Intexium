@@ -61,6 +61,7 @@ namespace Intexium
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            SeedData 
         }
     }
 }
