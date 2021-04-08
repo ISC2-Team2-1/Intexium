@@ -3,6 +3,7 @@ using Intexium.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -23,7 +24,10 @@ namespace Intexium.Controllers
 
         public IActionResult Index()
         {
-             ViewBag.ViewModels = new IndexViewModel { Books = context.Books };
+
+
+
+            ViewBag.String = "Hello!";
 
             return View();
 

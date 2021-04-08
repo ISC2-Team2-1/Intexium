@@ -10,7 +10,4 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-@foreach(var x in ViewBag.ViewModels.Books)
-            {
-                <p>@x.Title</p>
-            }
+@ViewBag.String
