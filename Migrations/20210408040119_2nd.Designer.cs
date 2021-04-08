@@ -9,8 +9,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Intexium.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210408034209_3rd")]
-    partial class _3rd
+    [Migration("20210408040119_2nd")]
+    partial class _2nd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
