@@ -23,10 +23,10 @@ namespace Intexium.Controllers
 
         public IActionResult Index()
         {
-            return View(new IndexViewModel
-            {
-                Books = context.Books
-            });
+             ViewBag.ViewModels = new IndexViewModel { Books = context.Books };
+
+            return View();
+
         }
 
         public IActionResult Privacy()
