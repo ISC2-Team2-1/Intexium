@@ -1,4 +1,5 @@
 ﻿using Intexium.Models;
+using Intexium.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -22,7 +23,10 @@ namespace Intexium.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(new IndexViewModel
+            {
+                Books = context.Books
+            });
         }
 
         public IActionResult Privacy()
