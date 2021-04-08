@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Recipes.Models.ViewModels
+namespace Intexium.Models.ViewModels
 {
     public class IndexViewModel
     {
